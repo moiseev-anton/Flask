@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {% if section_title %}
+        - {{ section_title }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h3>Описание:</h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consequuntur cupiditate deleniti dignissimos, ducimus et expedita
+    illo iure laudantium modi necessitatibus nesciunt officiis quas
+    quidem recusandae sequi temporibus tenetur totam voluptate.
+{% endblock %}

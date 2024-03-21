@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {% if section_title %}
+        - {{ section_title }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Количество</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in shoes_list %}
+                <tr onclick="location.href='/item/{{ item.name }}'">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.price }} руб.</td>
+                    <td>{{ item.quantity }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

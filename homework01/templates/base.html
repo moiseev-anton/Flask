@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        My Store
+        {% block title %}
+        {% endblock %}
+    </title>
+
+</head>
+
+<body>
+    <header>
+        <h1>My Store</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/clothes/">Одежда</a></li>
+            <li><a href="/shoes/">Обувь</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>
+            {% if section_title %}
+                {{ section_title }}
+            {% endif %}
+        </h2>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; My Store. Все права защищены</p>
+    </footer>
+</html>
