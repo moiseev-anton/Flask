@@ -3,11 +3,13 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
+# Главная страница
 @app.route('/')
 def home():
     return render_template('home.html')
 
 
+# Страница с одеждой
 @app.route('/clothes/')
 def clothes():
     section_title = 'Одежда'
@@ -31,6 +33,7 @@ def clothes():
     return render_template('clothes.html', section_title=section_title, clothes_list=clothes_list)
 
 
+# Страница с обувью
 @app.route('/shoes/')
 def shoes():
     section_title = 'Обувь'
@@ -54,6 +57,7 @@ def shoes():
     return render_template('shoes.html', section_title=section_title, shoes_list=shoes_list)
 
 
+# Страница отдельного товара
 @app.route('/item/<name>/')
 def item(name):
     section_title = name
