@@ -9,6 +9,7 @@ class User(db.Model):
     lastname = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(128), nullable=False)
+    age = db.Column(db.Integer)
 
     def __repr__(self):
         return f'{self.firstname} {self.lastname}'
